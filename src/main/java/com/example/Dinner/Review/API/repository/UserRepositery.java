@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface userRepositery extends CrudRepository<User,Integer> {
+public interface UserRepositery extends CrudRepository<User,Long> {
     Optional<User> findByName(String name);
     Boolean existsUserByName(String name);
 

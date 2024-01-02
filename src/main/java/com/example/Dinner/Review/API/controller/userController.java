@@ -4,7 +4,7 @@ import com.example.Dinner.Review.API.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.Dinner.Review.API.repository.userRepositery;
+import com.example.Dinner.Review.API.repository.UserRepositery;
 
 import java.util.Objects;
 
@@ -12,9 +12,9 @@ import java.util.Objects;
 @RequestMapping("/users")
 public class userController {
 
-    private final userRepositery userRepositery;
+    private final UserRepositery userRepositery;
 
-    public userController(com.example.Dinner.Review.API.repository.userRepositery userRepositery) {
+    public userController(UserRepositery userRepositery) {
         this.userRepositery = userRepositery;
     }
 

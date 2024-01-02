@@ -12,57 +12,58 @@ import java.text.DecimalFormat;
 @Table(name="RESTAURANTS")
 //when there is field with null value, it will be excluded
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class resturant {
+public class Restaurant {
 
-    private  final static DecimalFormat df = new DecimalFormat("###.00");
+    private  final static DecimalFormat df = new DecimalFormat("###.##");
 
     @Id
     @Getter
     @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    @Column(name="NAME")
     @Getter
     @Setter
+    @Column(name="NAME")
+
     private String name;
 
-    @Column(name="CITY")
     @Getter
     @Setter
+    @Column(name="CITY")
     private String city;
 
-    @Column(name="STATE")
     @Getter
     @Setter
+    @Column(name="STATE")
     private String state;
 
-    @Column(name="ZIPCODE")
     @Getter
     @Setter
+    @Column(name="ZIPCODE")
     private String zipcode;
 
-    @Column(name="PEANUT")
     @Getter
+    @Column(name="PEANUT")
     private Float peanut;
 
-    @Column(name="EGG")
     @Getter
+    @Column(name="EGG")
     private Float egg;
 
-    @Column(name="DAILY")
     @Getter
-    private Float daily;
+    @Column(name="DAIRY")
+    private Float dairy;
 
     public void setPeanut(Float peanut) {
-        this.peanut = Float.valueOf(resturant.df.format(peanut));
+        this.peanut = Float.valueOf(Restaurant.df.format(peanut));
     }
     public void setEgg(Float egg) {
-        this.egg = Float.valueOf(resturant.df.format(egg));
+        this.egg = Float.valueOf(Restaurant.df.format(egg));
     }
 
-    public void setDaily(Float daily) {
-        this.daily = Float.valueOf(resturant.df.format(daily));
+    public void setDaily(Float dairy) {
+        this.dairy = Float.valueOf(Restaurant.df.format(dairy));
     }
 
 

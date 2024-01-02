@@ -18,7 +18,7 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import com.example.Dinner.Review.API.repository.userRepositery;
+import com.example.Dinner.Review.API.repository.UserRepositery;
 
 @ContextConfiguration(classes = {userController.class})
 @ExtendWith(SpringExtension.class)
@@ -27,7 +27,7 @@ class userControllerDiffblueTest {
     private userController userController;
 
     @MockBean
-    private userRepositery userRepositery;
+    private UserRepositery userRepositery;
 
     /**
      * Method under test: {@link userController#createUser(User)}
